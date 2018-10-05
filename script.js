@@ -62,14 +62,10 @@ function endOther(str1, str2){
 function starOut(string){
     var newString = "";
     for(var i = 0; i < string.length; i++){
-        if(string.substring(i-1, i) != "*"){
-            if(string.substring(i, i+1) != "*"){
-                if(string.substring(i+1, i+2) != "*"){
-                    newString += string.substring(i, i+1);
-                }
+        if(string.substring(i-1, i) != "*" && string.substring(i, i+1) != "*" && string.substring(i+1, i+2) != "*"){
+            newString += string.substring(i, i+1);
             }
         }
-    }
     return newString;
 }
 
